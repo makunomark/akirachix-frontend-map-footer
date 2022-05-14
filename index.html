@@ -1,0 +1,78 @@
+<!-- Design Inspiration https://dribbble.com/shots/5409387-Viabill-Contact-Us -->
+<!-- Javascipt Map Tutorial https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="./map.js" type="module"></script>
+
+    <title>Map Footer</title>
+  </head>
+  <body>
+    <div class="footer">
+      <h3 class="footer-heading">Get in touch with Viabill</h3>
+
+      <!--The div element for the map -->
+      <div class="map-holder">
+        <div class="map" id="map"></div>
+        <p class="map-metadata">Akira Chix, 616 Korongo Rd, Karen</p>
+      </div>
+
+      <!-- 
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises
+        with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+      <!-- This will require you to create an API key. Check console for link -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=<API KEY>&callback=initMap&v=weekly"
+        defer
+      ></script>
+    </div>
+    <section class="contact-section">
+      <div class="contact-details">
+        <h3 class="title">Chat</h3>
+        <div class="details-holder">
+          <span>Response Time approx. 2 min</span>
+          <span>mon - thurs from 8:00 to 16:00</span>
+          <span>Friday from 8:00 to 15:00</span>
+        </div>
+      </div>
+      <div class="contact-details">
+        <h3 class="title">Telephone</h3>
+        <div class="details-holder">
+          <span>88 826 826</span>
+          <span>Response Time approx. 20 min</span>
+          <span>Mon-Fri from 10:00-15:00</span>
+        </div>
+      </div>
+      <div class="contact-details">
+        <h3 class="title">Mail</h3>
+        <div class="details-holder">
+          <span>support@viabill.com</span>
+          <span>Response Time approx. 5 weekdays</span>
+          <span>mon - thurs from 8:00 to 16:00</span>
+          <span>Friday from 8:00 to 15:00</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
